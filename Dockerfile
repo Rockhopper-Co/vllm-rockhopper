@@ -1,4 +1,4 @@
-FROM vastai/vllm:latest
+FROM vastai/vllm:v0.20.0-cuda-13.0
 
 # Install Node.js 20 and Claude Code CLI
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \

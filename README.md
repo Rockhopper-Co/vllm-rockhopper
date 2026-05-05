@@ -4,7 +4,7 @@ A [vast.ai](https://vast.ai) Docker image that layers [Claude Code](https://gith
 
 ## What's inside
 
-- **Base**: `vastai/vllm:latest`
+- **Base**: `vastai/vllm:v0.20.0-cuda-13.0`
 - **Added**: Node.js 20 + Claude Code CLI (`@anthropic-ai/claude-code`)
 - **vLLM config**: speculative decoding with MTP, 1 speculative token (`vllm-args.conf`)
 
