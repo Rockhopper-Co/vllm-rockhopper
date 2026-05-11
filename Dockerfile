@@ -8,3 +8,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
 
 # Bake in vLLM extra args (speculative decoding config)
 COPY vllm-args.conf /etc/vllm-args.conf
+
+# Entrypoint: auto-detects GPU count, sets --tensor-parallel-size, delegates to base
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
